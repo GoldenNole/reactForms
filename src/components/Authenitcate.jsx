@@ -26,7 +26,7 @@ const Authenitcate = ({token, setToken}) => {
         <div>
             <h2>Authenticate</h2>
             <button onClick={handleClick}>Authenticate Token</button>
-            {successMessage && <p>{successMessage}</p>}
+            {successMessage === "jwt malformed" ? <p>Please Enter a Username and Password!</p> : <p>{successMessage}</p>}
             {error && <p>{error}</p>}
         </div>
     );
