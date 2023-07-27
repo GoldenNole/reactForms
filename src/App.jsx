@@ -10,10 +10,10 @@ function App() {
   
 
   return (
-    <>
+    <div className='container'>
     <SignUpForm token={token} setToken={setToken}/>
     <Authenitcate token={token} setToken={setToken}/>
-    </>
+    </div>
   )
 }
 

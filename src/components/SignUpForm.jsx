@@ -33,8 +33,10 @@ const SignUpForm = ({token, setToken}) => {
             <h2>Sign Up</h2>
             {error && <p>{error}</p>} 
             <form onSubmit={handleSubmit}>
-                <label value = {username} onChange={(e) => setUsername(e.target.value)}> Username: <input /> </label>
+                <label value = {username} onChange={(e) => setUsername(e.target.value)}> Username: <input /> </label> 
+                <br></br>
                 <label value = {password} onChange={(e) => setPassword(e.target.value)}> Password: <input /> </label>
+                <br></br>
                 <button>Submit</button>
             </form>
         </>
