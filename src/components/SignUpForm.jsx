@@ -7,7 +7,12 @@ const SignUpForm = ({token, setToken}) => {
 
     const handleSubmit = async (event) =>{
         event.preventDefault();
-        console.log("HandleSubmit");
+        console.log("username", username);
+        if(username.length < 4) {
+            alert("Your username must be at minimum 5 characters in length")
+        }else if(password.length < 7) {
+            alert("Your password must be at minimum 8 characters in length")
+         }else{
         try {
             const response = await fetch('https://fsa-jwt-practice.herokuapp.com/signup', 
             { 
@@ -27,6 +32,7 @@ const SignUpForm = ({token, setToken}) => {
         } catch (error) {
             setError(error.message)
         }
+    }
     }
     return(
         <>
